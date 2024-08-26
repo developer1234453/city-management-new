@@ -1,0 +1,113 @@
+City Management API
+Overview
+The City Management API is a Node.js application that provides endpoints to manage a collection of cities. This API allows you to add, update, delete, and retrieve cities with various filtering and sorting options. It uses Express.js and in-memory storage for demonstration purposes.
+
+Features
+Add City: Create a new city with details including name, population, country, latitude, and longitude.
+Update City: Modify existing city details.
+Delete City: Remove a city from the collection.
+Get Cities: Retrieve cities with support for pagination, filtering, sorting, searching, and projection.
+Installation
+To get started with this project, follow these steps:
+
+Clone the Repository
+
+git clone https://github.com/your-username/city-management.git
+cd city-management
+Install Dependencies
+
+Make sure you have Node.js installed. Then, install the required dependencies:
+
+npm install
+Start the Server
+
+Run the server with:
+
+npm start
+The server will be available at http://localhost:3000.
+
+API Endpoints
+1. Add City
+Endpoint: POST /api/cities
+Request Body:
+{
+    "name": "CityName",
+    "population": 1000000,
+    "country": "CountryName",
+    "latitude": 12.34,
+    "longitude": 56.78
+}
+Response:
+{
+    "message": "City added successfully",
+    "city": {
+        "name": "CityName",
+        "population": 1000000,
+        "country": "CountryName",
+        "latitude": 12.34,
+        "longitude": 56.78
+    }
+}
+2. Update City
+Endpoint: PUT /api/cities/:name
+Request Body:
+{
+    "name": "UpdatedCityName",
+    "population": 2000000,
+    "country": "UpdatedCountry",
+    "latitude": 23.45,
+    "longitude": 67.89
+}
+Response:
+{
+    "message": "City updated successfully",
+    "city": {
+        "name": "UpdatedCityName",
+        "population": 2000000,
+        "country": "UpdatedCountry",
+        "latitude": 23.45,
+        "longitude": 67.89
+    }
+}
+3. Delete City
+Endpoint: DELETE /api/cities/:name
+Response:
+{
+    "message": "City deleted successfully",
+    "city": {
+        "name": "CityName",
+        "population": 1000000,
+        "country": "CountryName",
+        "latitude": 12.34,
+        "longitude": 56.78
+    }
+}
+4. Get Cities
+Endpoint: GET /api/cities
+Query Parameters:
+page: Page number for pagination
+limit: Maximum number of cities per page
+filter: Filter cities based on criteria (e.g., country=CountryName)
+sort: Sort cities based on a field and order (e.g., sort=population,-name)
+search: Search for cities based on a term (e.g., search=CityName)
+projection: Specify which fields to include or exclude (e.g., projection=name,population)
+Response:
+[
+    {
+        "name": "CityName",
+        "population": 1000000,
+        "country": "CountryName",
+        "latitude": 12.34,
+        "longitude": 56.78
+    }
+]
+Postman Collection
+A Postman collection is available for testing the API. You can import it into Postman using the .json file provided in the repository.
+
+Troubleshooting
+404 Not Found: Ensure the URL and HTTP method match the API endpoint.
+400 Bad Request: Check that the request body contains all required fields.
+Contributing
+Feel free to fork the repository and submit pull requests. If you encounter any issues, please open an issue in the repository.
+
+email: midhunchandera@gmail.com
