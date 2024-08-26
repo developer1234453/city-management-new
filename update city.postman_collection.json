@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "b3270e44-f191-48ca-8a9a-696c0185e78a",
+		"name": "update city",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37072439"
+	},
+	"item": [
+		{
+			"name": "New request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"population\": 900000,\r\n  \"country\": \"USA\",\r\n  \"latitude\": 37.7749,\r\n  \"longitude\": -122.4194\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cities/San Francisco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cities",
+						"San Francisco"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

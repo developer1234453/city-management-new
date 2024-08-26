@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "d4837fc4-63a2-434e-990a-c9cc27f902b8",
+		"name": "Get Cities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37072439"
+	},
+	"item": [
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/cities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cities",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
